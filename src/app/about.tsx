@@ -1,6 +1,15 @@
 "use client";
 
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiExpress,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiPostgresql,
+  SiMongodb,
+} from "react-icons/si";
 
 const words =
   "I am a MERN developer student at IIIT Bhopal, deeply interested in Linux and passionate about mastering data structures & algorithms and DevOps. I am committed to advancing my skills in these areas to contribute effectively to software engineering projects.";
@@ -12,7 +21,9 @@ export function About() {
       className="px-4 py-12 md:py-20 bg-background text-foreground"
     >
       <div className="max-w-3xl mx-auto text-left space-y-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center">Hi, I'm Durgesh 👋</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center">
+          Hi, I'm Durgesh 👋
+        </h2>
 
         <TextGenerateEffect words={words} />
 
@@ -34,6 +45,37 @@ export function About() {
             ></span>
           </a>
         </div>
+
+        {/* Tech Stack Icons */}
+        <div className="pt-12 text-center">
+  <h3 className="text-2xl font-semibold mb-4">Current Tech Stack</h3>
+  <div className="flex flex-wrap justify-center gap-6 text-4xl">
+    {[
+      { src: "/nextjs.svg", alt: "Next.js" },
+      { src: "/react.svg", alt: "React.js" },
+      { src: "/express.png", alt: "Express.js" },
+      { src: "/nodejs.png", alt: "Node.js" },
+      { src: "/tailwind.svg", alt: "Tailwind CSS" },
+      { src: "/postgre.png", alt: "PostgreSQL" },
+      { src: "mongodb.svg", alt: "MongoDB" },
+    ].map((tech, index) => (
+      <div
+        key={index}
+        className="group relative hover:scale-150 hover:rotate-3 transition-all duration-300 ease-in-out"
+      >
+        <img
+          src={tech.src}
+          alt={tech.alt}
+          title={tech.alt}
+          className="h-12 w-12 object-contain drop-shadow-md group-hover:drop-shadow-xl"
+        />
+        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition duration-300">
+          {tech.alt}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   );
