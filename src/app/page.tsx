@@ -16,7 +16,6 @@ export default function Page() {
       <About />
       <ThreeDCardDemo />
       <InfiniteMovingCardsDemo />
-      skills page banana hai
       <SignupFormDemo/>
       <Footer/>
       footer page banana hai
