@@ -18,7 +18,6 @@ export default function Page() {
       <InfiniteMovingCardsDemo />
       <SignupFormDemo/>
       <Footer/>
-      footer page banana hai
     </div>
   );
 }
